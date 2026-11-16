@@ -8,8 +8,8 @@
 ---
 
 ### Submitted by:
-1. **Harshitha Vangaveti** (USN: `PES2UG24AM064`)
-2. **Hamsa M N** (USN: `PES2UG24AM060`)
+1. **Harshitha Vangaveti** (SRN: `PES2UG24AM064`)
+2. **Hamsa M N** (SRN: `PES2UG24AM060`)
 
 ### Under the Guidance of:
 **Dr. Nagasundari S**  
@@ -331,19 +331,24 @@ Every relation was analyzed to ensure high performance, eliminate modification a
 #### Relation 1: `PETS`
 - **Schema:** `PETS(pet_id, owner_id, name, species, breed, color, distinctive_features, microchip_id, status, created_at)`
 - **Functional Dependencies:**
-  - $FD_1: pet\_id ightarrow \{owner\_id, name, species, breed, color, distinctive\_features, microchip\_id, status, created\_at\}$
-  - $FD_2: microchip\_id ightarrow \{pet\_id, owner\_id, name, species, breed, color, distinctive\_features, status, created\_at\}$
+  - $FD_1: pet\_id 
+ightarrow \{owner\_id, name, species, breed, color, distinctive\_features, microchip\_id, status, created\_at\}$
+  - $FD_2: microchip\_id 
+ightarrow \{pet\_id, owner\_id, name, species, breed, color, distinctive\_features, status, created\_at\}$
 - **Candidate Keys:** $\{pet\_id\}$, $\{microchip\_id\}$
 - **1NF:** All attributes are atomic. No repeating groups. $\checkmark$
 - **2NF:** No partial dependencies exist; all non-prime attributes are fully functionally dependent on the entire primary key $\{pet\_id\}$. $\checkmark$
-- **3NF:** No transitive dependencies. In $X ightarrow Y$, $X$ is a superkey. $\checkmark$
+- **3NF:** No transitive dependencies. In $X 
+ightarrow Y$, $X$ is a superkey. $\checkmark$
 - **BCNF:** For both $FD_1$ and $FD_2$, the determinant is a candidate key. Hence, `PETS` is in **BCNF**. $\checkmark$
 
 #### Relation 2: `POTENTIAL_MATCHES`
 - **Schema:** `POTENTIAL_MATCHES(match_id, lost_report_id, found_report_id, match_score, status, created_at)`
 - **Functional Dependencies:**
-  - $FD_1: match\_id ightarrow \{lost\_report\_id, found\_report\_id, match\_score, status, created\_at\}$
-  - $FD_2: \{lost\_report\_id, found\_report\_id\} ightarrow \{match\_id, match\_score, status, created\_at\}$
+  - $FD_1: match\_id 
+ightarrow \{lost\_report\_id, found\_report\_id, match\_score, status, created\_at\}$
+  - $FD_2: \{lost\_report\_id, found\_report\_id\} 
+ightarrow \{match\_id, match\_score, status, created\_at\}$
 - **Candidate Keys:** $\{match\_id\}$, $\{lost\_report\_id, found\_report\_id\}$
 - **BCNF Proof:** Every determinant is a candidate key. The composite uniqueness constraint `UNIQUE(lost_report_id, found_report_id)` ensures no redundant candidate pairs exist. Hence, `POTENTIAL_MATCHES` is in **BCNF**. $\checkmark$
 
