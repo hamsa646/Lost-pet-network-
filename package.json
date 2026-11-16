@@ -1,0 +1,32 @@
+{
+  "name": "lost-pet-network",
+  "version": "1.0.0",
+  "description": "Lost Pet Identification and Recovery Network - DBMS Level 3 Experiential Learning Project (PES University)",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "mysql2": "^3.9.3",
+    "mongodb": "^6.5.0",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "@types/bcryptjs": "^2.4.6",
+    "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.19"
+  }
+}
