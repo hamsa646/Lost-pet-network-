@@ -229,9 +229,6 @@ The `sightings` collection stores GeoJSON `Point` locations and has a `2dsphere`
 | Harshitha Vangaveti | PES2UG24AM064 |
 | Hamsa M N | PES2UG24AM060 |
 
-**Institution:** PES University, Department of Computer Science and Engineering  
-**Course:** UE23CS351A – Database Management Systems  
-**Faculty guide:** Dr. Nagasundari S
 
 ## Important Notes
 
